@@ -16,15 +16,15 @@
 As seguintes bibliotecas e linguagens foram usadas na construção do projeto:
 
 <h3>Back-End:</h3>
-* NodeJS
-* TypeScript
-* express
-* cors
+* NodeJS;</br>
+* TypeScript;</br>
+* express;</br>
+* cors;</br>
 
 <h3>Front-End:</h3>
-* React, utilizando componentes funcionais, incluindo hooks
-* consumo de API
-* Css
+* React, utilizando componentes funcionais, incluindo hooks;</br>
+* consumo de API;</br>
+* Css;</br>
 
 <h2 id="funciona">:heavy_check_mark: O que funciona</h2>
 
