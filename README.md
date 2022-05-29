@@ -36,8 +36,7 @@ As seguintes bibliotecas e linguagens foram usadas na construção do projeto:
 
 <h3>Front-End:</h3>
 
-<h4 id="link">:link: Link Surge - link para visualização do site</h4>
- <a href="https://estados-teste-processo-seletivo.surge.sh//">Consulta Estados</a>
+ <a href="https://estados-teste-processo-seletivo.surge.sh//">Link surge para consultar estados</a>
  
 * Visualizar Estados;</br>
 * Detalhar cada estado;</br>
