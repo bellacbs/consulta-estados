@@ -11,7 +11,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 * React, utilizando componentes funcionais, incluindo hooks
 * consumo de API
-* Styled-components
+* Css
 
 
 <h2 id="funciona">:heavy_check_mark: O que funciona</h2>
