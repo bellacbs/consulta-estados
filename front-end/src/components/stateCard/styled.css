@@ -1,0 +1,15 @@
+.card_container{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.name_state{
+    font-weight: bold;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
