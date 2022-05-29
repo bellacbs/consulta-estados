@@ -22,7 +22,7 @@ As seguintes bibliotecas e linguagens foram usadas na construção do projeto:
 
 <h2 id="funciona">:heavy_check_mark: O que funciona</h2>
 
-<a href="">Link Documentação- Postman</a></br>
+<a href="https://documenter.getpostman.com/view/20822987/Uz5CLdUW">Link Documentação- Postman</a></br>
 * Pegar lista de estados brasileiros com nome e sigla;</br>
 * Pegar população de um determinado estado brasileiro;</br>
 * Pegar nome, sigla e população de todos os estados;</br>
@@ -42,6 +42,9 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
+
+# Entre na pasta back-end
+$ cd back-end
 
 # Instale as dependências
 $ npm install
