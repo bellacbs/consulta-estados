@@ -11,7 +11,7 @@ const estadosController = new EstadosController()
 
 app.get("/estados", (request, response) => estadosController.pegarNomeESigla(request, response))
 app.get("/estados/:sigla", (request, response) => estadosController.pegarEstadoPorSigla(request, response))
-app.get("/v4/estados", (request, response) => estadosController.pegarTodosEstados(request, response))
+app.get("/v2/estados", (request, response) => estadosController.pegarTodosEstados(request, response))
 
 
 
