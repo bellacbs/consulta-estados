@@ -15,22 +15,37 @@
 
 As seguintes bibliotecas e linguagens foram usadas na construção do projeto:
 
+<h3>Back-End:</h3>
 * NodeJS
 * TypeScript
 * express
 * cors
 
+<h3>Front-End:</h3>
+* React, utilizando componentes funcionais, incluindo hooks
+* consumo de API
+* Css
+
 <h2 id="funciona">:heavy_check_mark: O que funciona</h2>
 
+<h3>Back-End:</h3>
 <a href="https://documenter.getpostman.com/view/20822987/Uz5CLdUW">Link Documentação- Postman</a></br>
 * Pegar lista de estados brasileiros com nome e sigla;</br>
 * Pegar população de um determinado estado brasileiro;</br>
 * Pegar nome, sigla e população de todos os estados;</br>
- 
+
+<h3>Front-End:</h3>
+* Visualizar Estados
+* Detalhar cada estado
+* Detalhar todos os Estados
+
 <h2 id="pendente">:construction: BackLog</h2>
 
+<h3>Back-End:</h3>
 - [x] Correção de bugs
 
+<h3>Front-End:</h3>
+- [ ] Fazer página de NotFound
 
 <h2 id="requisitos">:leftwards_arrow_with_hook: Pré-requisitos</h2>
 
@@ -39,6 +54,8 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 <h4>:checkered_flag: Rodando o projeto </h4>
+
+<h3>Back-End:</h3>
 
 ```bash
 # Clone este repositório
@@ -55,6 +72,20 @@ $ npm run start
 # O servidor inciará na porta:3003 - acesse <http://localhost:3003>
 # incluir rotas, conforme documentação
 ```
+<h3>Front-End:</h3>
 
+```bash
+# Clone este repositório
 
+# Entrar na pasta do front-end
+$ cd front-end
+
+# Instale as dependências
+$ npm install
+
+# Para iniciar o projeto
+$ npm run start
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
 <a href="#top">Voltar para o topo</a>
