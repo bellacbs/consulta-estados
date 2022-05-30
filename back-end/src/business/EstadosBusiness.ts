@@ -1,25 +1,27 @@
 import { NotFoundElementError } from "../error/NotFoundElementError"
 import { IEstadosRepository } from "../model/IEstadosRepository"
 
-export class EstadosBusiness{
+export class EstadosBusiness {
     constructor(
         private estadosDataBase: IEstadosRepository
-    ){
+    ) {
     }
-    async pegarNomeESigla(){
-       const estados = await this.estadosDataBase.pegarNomeESigla()
+    async pegarNomeESigla() {
+        const estados = await this.estadosDataBase.pegarNomeESigla()
 
-       const novosEstados = estados.map((estado: any) => {
-           return {nome: estado.nome, uf: estado.sigla}
-       })
+        const novosEstados = estados.map((estado: any) => {
+            return { nome: estado.nome, uf: estado.sigla }
+        }).sort(function (a: any, b: any) {
+            return a.nome < b.nome ? -1 : a.nome > b.nome ? 1 : 0;
+        })
 
-       return novosEstados
+        return novosEstados
     }
 
-    async pegarEstadoPorSigla(sigla: string){
+    async pegarEstadoPorSigla(sigla: string) {
         const id = await this.estadosDataBase.pegarId(sigla)
 
-        if(!id){
+        if (!id) {
             throw new NotFoundElementError("Estado não encontrado, informe uma sigla válida")
         }
 
@@ -31,27 +33,31 @@ export class EstadosBusiness{
         }
 
         return estado
-   
+
     }
 
-    async pegarTodosEstados(){
+    async pegarTodosEstados() {
         const estados = await this.estadosDataBase.pegarNomeESigla()
 
-       const novosEstados = estados.map((estado: any) => {
-           return {id: estado.id,nome: estado.nome, uf: estado.sigla}
-       })
+        const novosEstados = estados.map((estado: any) => {
+            return { id: estado.id, nome: estado.nome, uf: estado.sigla }
+        })
 
-        const todosEstados = await Promise.all(novosEstados.map(async(estado: any) => {
+        const todosEstados = await Promise.all(novosEstados.map(async (estado: any) => {
             const populacao = await this.estadosDataBase.pegarPopulacaoPorSigla(estado.id.toString())
-            return{
+            return {
                 nome: estado.nome,
                 uf: estado.uf,
                 populacao
             }
         }))
 
+        const estadosOrdenados = todosEstados.sort(function (a: any, b: any) {
+            return a.nome < b.nome ? -1 : a.nome > b.nome ? 1 : 0;
+        })
 
-        return {estados: todosEstados}
+
+        return { estados: estadosOrdenados }
     }
-    
+
 }
